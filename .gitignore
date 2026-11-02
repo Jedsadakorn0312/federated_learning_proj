@@ -1,0 +1,24 @@
+# Python and local environments
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+
+# Local datasets and generated PyTorch artifacts
+*.csv
+*.pt
+*.pth
+*.log
+processed/
+raw/
+
+# Generated research outputs
+*.png
+*.pdf
+*.xlsx
+
+# Local editor files
+.vscode/
+.idea/
+tempCodeRunnerFile.py
