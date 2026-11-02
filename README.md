@@ -34,8 +34,10 @@ include bond order, conjugation, and ring membership.
 
 ## Research summary
 
-- **Task:** Regression of molecular pIC50 values for drug-discovery datasets
-  associated with diabetes, heart disease, and Alzheimer's disease.
+- **Task:** Predict molecular pIC50 values. The full report covers 11,936
+  records across four disease groups: arthritis, diabetes, heart disease, and
+  stroke. The public code snapshot references a different three-group dataset
+  configuration, as explained below.
 - **Model:** A graph neural network using GATv2 attention layers, layer
   normalization, residual connections, and mean/max graph pooling.
 - **Federated setup:** Flower coordinates multiple clients. FedAvg is used as
@@ -120,14 +122,20 @@ aggregation remains stable and continues to reduce global loss.
 - `FedProj/evaluation.py` calculates comparison metrics and creates plots.
 - `FedProj/tune_model.py` runs Optuna hyperparameter tuning.
 
+## My contribution
+
+My contribution focused on collecting and cleaning ChEMBL bioactivity data and
+using RDKit to prepare molecular graph inputs for downstream GATv2 modeling.
+Model development and federated learning experiments were handled by other team
+members.
+
 ## Important scope note
 
-The accompanying report describes experiments involving four disease groups
-and 11,936 molecular records. The public source snapshot currently contains
-client examples for three disease CSVs (`diabetes`, `heart`, and `alzheimers`).
-The fourth-group data and all raw records are intentionally not published
-here, so the report's full numerical results cannot be reproduced from this
-public repository alone.
+The accompanying report describes experiments involving 11,936 molecular
+records across four disease groups: arthritis, diabetes, heart disease, and
+stroke. The public code snapshot does not fully match the four-group
+configuration documented in the report, so the report's full numerical
+results cannot be reproduced from this repository alone.
 
 ## Data and generated artifacts
 
