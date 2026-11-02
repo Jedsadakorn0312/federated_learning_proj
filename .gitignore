@@ -18,6 +18,14 @@ raw/
 *.pdf
 *.xlsx
 
+# Curated figures included in the project overview
+!FedProj/molecule_graph.png
+!FedProj/experiment_1_comparison.png
+!FedProj/experiment_3_result.png
+!FedProj/experiment_4_result.png
+!FedProj/thesis_final_result.png
+!fl_architecture_diagram.png
+
 # Local editor files
 .vscode/
 .idea/
